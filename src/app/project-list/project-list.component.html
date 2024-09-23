@@ -1,0 +1,45 @@
+<section>
+  <div class="project-container">
+      <button type="button" class="btn btn-light" [routerLink]="['/dashboard']">back</button>
+
+      <div style="display: flex;justify-content: space-between;" class="col-md-12">
+        <h6>Project List</h6>
+        <div style="display: flex;">
+            <label style="padding:10px 30px;">Filter by Status</label>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+            data-bs-toggle="dropdown" 
+            aria-expanded="false">
+                {{selected}}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" (click)="filterByStatus('All')">All</a></li>
+              <li><a class="dropdown-item" (click)="filterByStatus('Pending')">Pending</a></li>
+              <li><a class="dropdown-item" (click)="filterByStatus('In Progress')">In Progress</a></li>
+              <li><a class="dropdown-item" (click)="filterByStatus('Completed')">Completed</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <div style="padding-top: 20px;">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let project of filteredProjects">
+                <h5>{{ project.name }}</h5>
+                <p>{{ project.description }}</p>
+                <p>Status: {{ project.status }}</p>
+                <p>Deadline: {{ project.deadline | date }}</p>
+                <p>Team: {{ project.teamMembers }}</p>
+                <button  type="button" class="btn btn-light" [routerLink]="['/dashboard/details', project.id]">
+                  View Details
+                </button>
+            </li>
+        </ul>
+
+        @if(filteredProjects.length === 0){
+            <div>No records found</div>
+        }
+    </div>
+
+  </div>
+</section>

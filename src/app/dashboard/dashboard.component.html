@@ -1,0 +1,13 @@
+<section>
+   <div class="project-container">
+      <h5>Project Status Overview</h5>
+      <button type="button" class="btn btn-light" [routerLink]="['/dashboard/project-list']">Projects</button>
+      <canvas
+      baseChart
+      [data]="pieChartData"
+      [options]="pieChartOptions"
+      chartType="pie">
+      </canvas>
+    </div>
+</section>
+

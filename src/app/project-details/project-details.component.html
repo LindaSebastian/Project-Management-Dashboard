@@ -1,0 +1,15 @@
+<section>
+    <button type="button" style="margin-top: 30px;" class="btn btn-light" [routerLink]="['/dashboard/project-list']">back</button>
+
+    <div class="project-container" *ngIf="projectDetails">
+        <mat-card appearance="outlined">
+            <mat-card-content> 
+                <h5>{{ projectDetails.name }}</h5>
+                <p>{{ projectDetails.description }}</p>
+                <p>Status: {{ projectDetails.status }}</p>
+                <p>Deadline: {{ projectDetails.deadline | date }}</p>
+                <p>Team: {{ projectDetails.teamMembers }}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</section>
