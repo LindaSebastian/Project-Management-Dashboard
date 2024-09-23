@@ -1,5 +1,10 @@
+Angular 18
+Bootstrap
+Angular material
+
 # Prequisites: 
 Install nodejs : 20.16.0
+
 Install Vscode
 
 # Install Angular 18 
@@ -7,6 +12,7 @@ Install Vscode
 npm install -g @angular/cli@18
 
 ## Development server
+npm install
 Run `npm start` to run the project on local
 
 ## Build
