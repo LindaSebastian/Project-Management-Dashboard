@@ -35,12 +35,19 @@ export class DashboardComponent {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
+        display: false
       },
       tooltip: {
         enabled: true,
       },
-    },
+      title: {
+        display: true,
+        text: 'Project Chart', 
+        font: {
+          size: 18, 
+        },
+      },
+    }
   };
 
   constructor(private projectService : ProjectService){
