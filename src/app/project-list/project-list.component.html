@@ -22,17 +22,22 @@
         </div>
     </div>
 
-    <div style="padding-top: 20px;">
+    <div style="padding-top: 10px;">
         <ul class="list-group">
             <li class="list-group-item" *ngFor="let project of filteredProjects">
-                <h5>{{ project.name }}</h5>
-                <p>{{ project.description }}</p>
-                <p>Status: {{ project.status }}</p>
-                <p>Deadline: {{ project.deadline | date }}</p>
-                <p>Team: {{ project.teamMembers }}</p>
-                <button  type="button" class="btn btn-light" [routerLink]="['/dashboard/details', project.id]">
-                  View Details
-                </button>
+                <div style="display:flex;">
+                  <img width="30px" height="30px" [src]="'assets/' + project.image + '.png'" [alt]="getAltText(project?.image)" />
+                  <span class="proj-h">{{ project.name }}</span>
+                  <button style="margin-left: auto;" type="button" class="btn btn-secondary details-btn" [routerLink]="['/dashboard/details', project.id]">
+                    View Details
+                  </button>
+                </div>
+                <div class="content">
+                  <p>{{ project.description }}</p>
+                  <p>Status: {{ project.status }}</p>
+                  <p>Deadline: {{ project.deadline | date }}</p>
+                  <p>Team: {{ project.teamMembers }}</p>
+                </div>
             </li>
         </ul>
 

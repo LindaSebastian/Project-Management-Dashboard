@@ -36,4 +36,12 @@ export class ProjectListComponent {
       this.filteredProjects = this.projects.filter((ele)=>ele.status == event);
     }
   }
+
+  getAltText(imageLabel : string | undefined) {
+    return imageLabel ? imageLabel.split('.')[0] : 'Project'
+  }
+
+  get imageP() {
+    return "j";
+  }
 }

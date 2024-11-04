@@ -14,9 +14,11 @@ export class ProjectService {
 
   getProjectNames() {
     let projectNames: any[] = [];
-    PROJECTS.forEach((project)=> {
-      projectNames.push(project.name)
-    });
+    // PROJECTS.forEach((project)=> {
+    //   projectNames.push(project.name)
+    // });
+
+    projectNames = PROJECTS.map((ele)=> ele.name);
     return projectNames;
   }
 

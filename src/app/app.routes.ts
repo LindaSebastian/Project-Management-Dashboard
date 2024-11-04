@@ -5,7 +5,6 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 
 export const routes: Routes = [
     {path:'dashboard',component: DashboardComponent},
-    {path:'dashboard/project-list',component: ProjectListComponent},
     {path:'dashboard/details/:id',component: ProjectDetailsComponent},
     {path:'',redirectTo: 'dashboard', pathMatch: 'full'},
     {path: '**', redirectTo: '/dashboard' },

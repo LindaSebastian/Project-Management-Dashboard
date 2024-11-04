@@ -1,15 +1,17 @@
-<section>
-   <div class="project-container">
-      <h5>Project Status Overview</h5>
-      <button type="button" class="btn btn-light" [routerLink]="['/dashboard/project-list']">Projects</button>
-      <div class="canvas">
-        <canvas
-        baseChart
-        [data]="pieChartData"
-        [options]="pieChartOptions"
-        chartType="pie">
-        </canvas>
-      </div>
+<section style="display: inline-flex;">
+  <div class="col-md-6">
+    <app-project-list></app-project-list>
+  </div>
+  <div class="project-container col-md-6">
+    <h5>Project Status Overview</h5>
+    <div class="canvas">
+      <canvas
+      baseChart
+      [data]="pieChartData"
+      [options]="pieChartOptions"
+      chartType="pie">
+      </canvas>
     </div>
+  </div>
 </section>
 

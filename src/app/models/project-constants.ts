@@ -7,7 +7,8 @@ export const PROJECTS: Project[] = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     status: 'In Progress',
     deadline: new Date('2024-06-30'),
-    teamMembers: ['John Doe', 'Jane Smith', 'Alice Johnson']
+    teamMembers: ['John Doe', 'Jane Smith', 'Alice Johnson'],
+    image:'Project1'
     },
     {
     id: 2,
@@ -16,7 +17,8 @@ export const PROJECTS: Project[] = [
     description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     status: 'Completed',
     deadline: new Date('2024-05-15'),
-    teamMembers: ['Bob Brown', 'Mary Davis']
+    teamMembers: ['Bob Brown', 'Mary Davis'],
+    image:'Project2'
     },
     // Add more mock projects as needed
 ];

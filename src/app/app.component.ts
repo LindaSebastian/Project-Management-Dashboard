@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from './shared.module';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,8 @@ import { SharedModule } from './shared.module';
   imports: [
     RouterOutlet,
     DashboardComponent,
-    SharedModule
+    SharedModule,
+    HeaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

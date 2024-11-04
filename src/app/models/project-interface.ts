@@ -5,4 +5,5 @@ export interface Project {
     status: 'Pending' | 'In Progress' | 'Completed';
     deadline: Date;
     teamMembers: string[];
+    image?:string;
 }
